@@ -1,0 +1,124 @@
+/* Define the custom color palette */
+:root {
+    --color-deep-dark-blue: #00171f; /* Deep dark blue for gradient */
+    --color-dark-blue: #003459;     /* Dark blue for solid areas */
+    --color-teal-blue: #007ea7;     /* Teal blue for accents and highlights */
+    --color-light-gray: #f9f9f9;    /* Text color for better readability */
+    --color-white: #ffffff;         /* White text for contrast */
+  }
+  
+  /* General styles for the body */
+  body {
+    background: linear-gradient(135deg, var(--color-deep-dark-blue), var(--color-dark-blue));
+    color: var(--color-light-gray);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Form container styling */
+  form {
+    background: var(--color-dark-blue); /* Solid dark blue for form background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6); /* Deep shadow for depth */
+    border: 1px solid var(--color-teal-blue);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* Form heading */
+  form h2 {
+    color: var(--color-teal-blue);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Labels */
+  form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 16px;
+    color: var(--color-light-gray);
+  }
+  
+  /* Inputs and select fields */
+  form input[type="number"],
+  form input[type="radio"],
+  form select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background: var(--color-light-gray); /* Light gray for input fields */
+    color: var(--color-dark-blue);       /* Dark blue for input text */
+    border: 1px solid var(--color-teal-blue);
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Radio buttons */
+  form input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 0 0;
+    accent-color: var(--color-teal-blue); /* Teal for radio buttons */
+  }
+  
+  /* Select dropdown */
+  form select {
+    cursor: pointer;
+  }
+  
+  /* Hover and focus effects */
+  form input:hover,
+  form select:hover {
+    border-color: var(--color-teal-blue);
+  }
+  
+  form input:focus,
+  form select:focus {
+    outline: none;
+    border-color: var(--color-teal-blue);
+    box-shadow: 0 0 5px var(--color-teal-blue);
+  }
+  
+  /* Submit button styling */
+  form button {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-teal-blue); /* Teal blue for button */
+    color: var(--color-white);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  form button:hover {
+    background: var(--color-dark-blue); /* Dark blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  /* Form responsiveness */
+  @media (max-width: 768px) {
+    form {
+      padding: 20px;
+    }
+  
+    form label,
+    form input,
+    form select,
+    form button {
+      font-size: 14px;
+    }
+  }
+  
